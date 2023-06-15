@@ -1,18 +1,15 @@
-#define CATCH_CONFIG_MAIN
-#include <catch2/catch.hpp>
+#include <gtest/gtest.h>
+#include "LibraryCode.hpp"
 
-#include "my_lib.h"
 
-TEST_CASE("Factorials are computed", "[factorial]")
+TEST(TestSuiteSample, TestSample)
 {
-    REQUIRE(factorial(0) == 1);
-    REQUIRE(factorial(1) == 1);
-    REQUIRE(factorial(2) == 2);
-    REQUIRE(factorial(3) == 6);
-    REQUIRE(factorial(10) == 3628800);
+  int s = sum(2, 4);
+  ASSERT_EQ(6, s);
 }
 
-TEST_CASE("Test printer function", "[print_hello_world]")
+int main(int argc, char **argv)
 {
-    REQUIRE(print_hello_world() == 1);
+ testing::InitGoogleTest(&argc, argv);
+ return RUN_ALL_TESTS();
 }
