@@ -45,6 +45,7 @@ include(ConfigSafeGuards)
 include(AddGitSubmodule)
 include(Docs)
 include(Tools)
+include(FetchContent)
 
 if(ENABLE_WARNINGS)
     include(Warnings)
